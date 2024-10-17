@@ -12,6 +12,8 @@ export const Home = () => {
   const [page, setPage] = useState(0);
   const [userName, setUserName] = useState("나");
 
+  const [isLoading, setIsLoading] = useState(true);
+
   const mainImgUrl =
     "https://i.pinimg.com/564x/7e/f0/2a/7ef02aad7d4438c412fd9e2b39a5c66a.jpg";
 
@@ -28,17 +30,12 @@ export const Home = () => {
         padding={"40px 10px"}
       >
         <Box marginTop={"40px"}>
-          <Heading
-            textAlign={"center"}
-            fontSize={"55px"}
-            fontWeight={"900"}
-            color={"#008433"}
-          >
+          <Heading textAlign={"center"} fontSize={"55px"} color={"#008433"}>
             내 면역력은 <br />
             괜찮을까?
           </Heading>
 
-          <Text
+          <Heading
             textAlign={"center"}
             fontSize={"30px"}
             fontWeight={"900"}
@@ -46,7 +43,7 @@ export const Home = () => {
             marginTop={"20px"}
           >
             #면역력 테스트
-          </Text>
+          </Heading>
           <Img w={"100%"} src={mainImgUrl} marginTop={"30px"} />
         </Box>
 

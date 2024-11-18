@@ -8,7 +8,6 @@ import {
   Container,
   Heading,
   Img,
-  Text,
   useColorMode,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
@@ -17,14 +16,15 @@ import { QnA } from "../QnA";
 export const Home = () => {
   useScrollTop();
 
-  const [page, setPage] = useState(0);
-  const [userName, setUserName] = useState("나");
+  const [page, setPage] = useState(1);
+
+  console.log(page);
 
   const { colorMode } = useColorMode();
   const [isLoading, setIsLoading] = useState(true);
 
   const mainImgUrl =
-    "https://i.pinimg.com/564x/7e/f0/2a/7ef02aad7d4438c412fd9e2b39a5c66a.jpg";
+    "https://i.pinimg.com/736x/f4/3a/9c/f43a9cf020a2ebd2214dffea9e71ee63.jpg";
 
   return (
     <>
@@ -54,7 +54,7 @@ export const Home = () => {
             >
               #면역력 테스트
             </Heading>
-            <Img w={"100%"} src={mainImgUrl} marginTop={"30px"} />
+            <Img w={"95%"} src={mainImgUrl} marginTop={"20px"} />
           </Box>
 
           <Link to={"/qna"}>
@@ -64,7 +64,7 @@ export const Home = () => {
               bgColor={"#008433"}
               color={"#fff"}
               marginLeft={"155px"}
-              marginTop={"20px"}
+              marginTop={"40px"}
               colorScheme="none"
             >
               테스트 시작!
@@ -72,12 +72,7 @@ export const Home = () => {
           </Link>
         </Container>
       ) : (
-        <QnA
-          page={page}
-          setPage={setPage}
-          colorMode={colorMode}
-          name={userName}
-        />
+        <QnA />
       )}
     </>
   );

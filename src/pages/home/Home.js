@@ -16,7 +16,7 @@ import { QnA } from "../QnA";
 export const Home = () => {
   useScrollTop();
 
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
 
   console.log(page);
 
@@ -66,6 +66,7 @@ export const Home = () => {
               marginLeft={"155px"}
               marginTop={"40px"}
               colorScheme="none"
+              cursor={"pointer"}
             >
               테스트 시작!
             </Button>

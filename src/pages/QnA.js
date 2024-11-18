@@ -124,11 +124,11 @@ export const QnA = () => {
       w={"100%"}
       h={"100vh"}
       mx={"auto"}
-      bgColor={"#fff"}
+      bgColor={"#f9f9f9"}
       padding={"40px 10px"}
     >
       {page <= questList.length ? (
-        <Box padding={"40px 10px"}>
+        <Box padding={"40px 30px"}>
           <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
             <Heading
               color={"#008433"}
@@ -152,12 +152,12 @@ export const QnA = () => {
               {`${questList.length}`}
             </Heading>
           </Box>
-          {questList?.map((data) => (
+          {questList?.map((data, idx) => (
             <Box
               key={data.id}
               display={"flex"}
               flexDirection={"column"}
-              style={{ display: page === data.id + 1 ? "flex" : "none" }}
+              style={{ display: page === idx + 1 ? "flex" : "none" }}
             >
               <Box margin={"30px 0"}>
                 <Heading
@@ -165,9 +165,25 @@ export const QnA = () => {
                   margin={"30px 0"}
                   fontSize={"30px"}
                   fontWeight={"700"}
+                  color={"#333333"}
                 >
                   {data.q}
                 </Heading>
+              </Box>
+              <Box>
+                {data?.a?.map((aData, aidx) => (
+                  <Button
+                    key={aData.id}
+                    padding={"30px"}
+                    width={"100%"}
+                    marginBottom={"20px"}
+                    bgColor={"#319357"}
+                    color={"#fff"}
+                    onClick={() => handleClick(data.score, aidx)}
+                  >
+                    {aData.text}
+                  </Button>
+                ))}
               </Box>
             </Box>
           ))}

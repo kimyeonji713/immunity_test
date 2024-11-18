@@ -9,7 +9,7 @@ const styles = {
   global: {
     "html, body": {
       color: mode("gray.800", "#d9d9d9"),
-      bg: mode("#f6f6f6", "#202140"),
+      bg: mode("#f1f1f1", "#202140"),
     },
   },
 };

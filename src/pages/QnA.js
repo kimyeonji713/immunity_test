@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Center,
-  Container,
-  flexbox,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Container, Heading } from "@chakra-ui/react";
 import { useState } from "react";
 import { Result } from "./Result";
 
@@ -189,7 +181,7 @@ export const QnA = () => {
           ))}
         </Box>
       ) : (
-        <Box></Box>
+        <Result />
       )}
     </Container>
   );

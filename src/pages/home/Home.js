@@ -14,15 +14,15 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { QnA } from "../QnA";
+// import { Header } from "../../components/Header";
 
 export const Home = () => {
   useScrollTop();
 
   const [page, setPage] = useState(0);
 
-  console.log(page);
-
   const { colorMode } = useColorMode();
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

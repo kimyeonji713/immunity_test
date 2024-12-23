@@ -121,12 +121,10 @@ export const QnA = () => {
     >
       {page <= questList.length ? (
         <Box padding={"40px 30px"}>
-          <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
-            <Heading
-              color={"#008433"}
-              fontSize={"52px"}
-              fontWeight={700}
-            >{`0${page}`}</Heading>
+          <Box display={"flex"} ustifyContent={"center"} alignItems={"center"}>
+            <Heading color={"#008433"} fontSize={"52px"} fontWeight={700}>
+              {`0${page}`}
+            </Heading>
             <Heading
               fontSize={"16px"}
               fontWeight={700}
@@ -171,7 +169,7 @@ export const QnA = () => {
                     marginBottom={"20px"}
                     bgColor={"#319357"}
                     color={"#fff"}
-                    onClick={() => handleClick(data.score, aidx)}
+                    onClick={() => handleClick(aData.score, aidx)}
                   >
                     {aData.text}
                   </Button>
